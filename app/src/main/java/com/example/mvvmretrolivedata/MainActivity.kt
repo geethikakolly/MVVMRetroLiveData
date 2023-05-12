@@ -11,6 +11,10 @@ import com.example.mvvmretrolivedata.model.Jokes
 import com.example.mvvmretrolivedata.repository.MemesRepo
 import com.example.mvvmretrolivedata.viewmodel.MemesViewModel
 import com.example.mvvmretrolivedata.viewmodel.MemesViewModelFactory
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
@@ -33,5 +37,27 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+       /* binding.recyclerview.adapter = adapter
+
+        viewModel.movieList.observe(this, Observer {
+            Log.d(TAG, "movieList: $it")
+            adapter.setMovieList(it)
+        })
+
+        viewModel.errorMessage.observe(this, Observer {
+            Log.d(TAG, "errorMessage: $it")
+        })
+
+        viewModel.getAllMovies()*/
+
+       /* GlobalScope.launch {
+            val result = RetrofitHelper.getInstance().getSchoolList()
+            Log.e("MainActivity","${result.size}")
+            withContext(Dispatchers.Main) {
+                recycleView.adapter = NycAdapter(result)
+            }
+
+        }*/
     }
 }

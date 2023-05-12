@@ -8,3 +8,4 @@ data class Memes(
     val url: String,
     val width: Int
 )
+
